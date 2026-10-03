@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!--Author: Catherine Roby -->
+<!-- Course: Intro to Web Systems ITEC 362-->
+<!-- Assignment: Static Website for GitHub Pages-->
+<!-- Date: October 2026-->
+        <meta charset="UTF-8">
+        <title>Clinical Decision Guide- Home</title>
+        
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+            .welcome-style {
+                font-style: italic;
+            }
+        </style>        
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">                
+                <img src="images/logo-placeholder.png" alt="Site Logo">
+            </div>
+            <h1>Clinical Decision Guide</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="symptoms.html">Symptoms</a></li>
+                <li><a href="tests.html">Test Selector</a></li>
+                <li><a href="details.html">Test Details</a></li>
+                <li><a href="feedback.html">Provider Feedback</a></li>
+            </ul>
+        </nav>
+
+    <main>
+        <h2 class="welcome-style home-heading">Welcome to the Clinical Test Decision Guide</h2>
+
+        <div class="home-layout">
+
+            <div class="hero-text">
+                <p style="text-indent: 20px;">
+                The purpose of this site is to provide a simple, easy-to-navigate 
+                clinical decision guide that helps medical providers quickly determine 
+                which diagnostic test is most appropriate based on the patient’s 
+                symptoms. This tool streamlines decision-making for ordering tests, 
+                reduces unnecessary testing, and improves workflow efficiency by giving 
+                providers a clear, organized reference tool.
+                </p>
+
+                <p style="text-indent: 20px;">
+                This tool is intended to help medical providers quickly determine which
+                diagnostic test is most appropriate based on the patient’s symptoms. It
+                supports efficient workflows and reduces unnecessary testing by providing
+                a clear, organized reference.
+                </p>
+
+                <button class="start-button" onclick="window.location.href='symptoms.html'">
+                    Start Test Selection
+                </button>
+            </div>
+
+            <div class="hero-image">
+            <img src="images/heroimage-placeholder.png" alt="Clinical Decision Guide Main Image">
+            </div>
+
+        </div>
+    </main>        
+
+        <footer>
+            <p class="footer-text">
+                &copy; 2026 Clinical Test Decision Guide - Supporting evidence-based diagnostic workflows  
+            </p>
+        </footer>
+    </body>    
+</html>
