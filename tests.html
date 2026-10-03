@@ -46,12 +46,14 @@
             <div class="test-panel">
                 <h3 id="selected-symptom" class="test-details"></h3>
 
-                <div id="test-results" style="display: none;">
-
+                <div id="test-results">
                 <p class="test-details">Select a test to view details:
                 </p>
                     <ul class="test-list" id="test-list">                        
                     </ul>
+                <hr>
+                <p><strong>Future Feature:</strong> Browse all available tests</p>
+                <p>This feature will allow providers to search or browse tests directly without selecting a symptom.</p>
                 </div>
             </div>
         </div>
@@ -62,46 +64,56 @@
             &copy; 2026 Clinical Test Decision Guide - Supporting evidence-based diagnostic workflows  
             </p>
         </footer>
-    <script>
-        /* 1. Read the symptom from the URL */
-        const params = new URLSearchParams(window.location.search);
-        const symptom = params.get("symptom");
+    <script>        
+        document.addEventListener("DOMContentLoaded", function() {
 
-        /* 2. Get page elements */
-        const testResults = document.getElementById("test-results");
-        const testList = document.getElementById("test-list");
-        const symptomHeading = document.getElementById("selected-symptom");
+            /* 1. Read the symptom from the URL */
+            const urlParams = new URLSearchParams(window.location.search);
+            const symptom = urlParams.get("symptom");
 
-        /* 3. Your symptom → test lookup table */
-        const testsBySymptom = {
-            chest: ["ECG", "Chest X-ray", "CT Chest w/contrast", "Stress Test", "Echocardiogram"],
-            abdominal: ["Abdominal Ultrasound", "CT Abdomen", "HIDA Scan", "MRI Abdomen"],
-            vascular: ["Arterial Duplex", "Venous Duplex", "CTA Runoff"],
-            neuro: ["CT Head", "MRI Brain", "EEG", "Carotid Ultrasound"],
-            respiratory: ["Chest X-ray", "Pulmonary Embolism CT", "CT Chest", "V/Q Scan"],
-            other: ["Tests Coming Soon"]
-        };
+            /* 2. Get page elements */
+            const testResults = document.getElementById("test-results");
+            const testList = document.getElementById("test-list");
+            const symptomHeading = document.getElementById("selected-symptom");
 
-        /* 4. If a valid symptom was passed, show the correct tests */
-        if (symptom && testsBySymptom[symptom]) {
+            /* 3. If NO symptom was passed, show message */
+            if (!symptom) {
+                testResults.style.display = "block";
+                testList.innerHTML = `
+                    <p>Please choose a symptom first.</p>
+                    <p><a href="symptoms.html">Go to Symptoms</a></p>
+                `;
+                return;
+            }
 
-            /* Convert “chest” → “Chest” for the heading */
-            const formattedSymptom =
-                symptom.charAt(0).toUpperCase() + symptom.slice(1);
+            /* 4. Your symptom → test lookup table */
+            const testsBySymptom = {
+                chest: ["ECG", "Chest X-ray", "CT Chest w/contrast", "Stress Test", "Echocardiogram"],
+                abdominal: ["Abdominal Ultrasound", "CT Abdomen", "HIDA Scan", "MRI Abdomen"],
+                vascular: ["Arterial Duplex", "Venous Duplex", "CTA Runoff"],
+                neuro: ["CT Head", "MRI Brain", "EEG", "Carotid Ultrasound"],
+                respiratory: ["Chest X-ray", "Pulmonary Embolism CT", "CT Chest", "V/Q Scan"],
+                other: ["Tests Coming Soon"]
+            };
 
-            /* Update heading text */
-            symptomHeading.textContent = "Tests for " + formattedSymptom + " Symptoms";
+            /* 5. If a valid symptom was passed, show the correct tests */
+            if (testsBySymptom[symptom]) {
 
-            /* Build the clickable test list */
-            const tests = testsBySymptom[symptom];
+                const formattedSymptom =
+                    symptom.charAt(0).toUpperCase() + symptom.slice(1);
 
-            testList.innerHTML = tests
-                .map(test => `<li><a href="details.html?test=${encodeURIComponent(test)}">${test}</a></li>`)
-                .join("");
+                symptomHeading.textContent = "Tests for " + formattedSymptom + " Symptoms";
 
-            /* Show the results panel */
-            testResults.style.display = "block";
-        }
+                const tests = testsBySymptom[symptom];
+
+                testList.innerHTML = tests
+                    .map(test => `<li><a href="details.html?test=${encodeURIComponent(test)}">${test}</a></li>`)
+                    .join("");
+
+                testResults.style.display = "block";
+            }
+
+        });
     </script>
 
     </body>
