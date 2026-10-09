@@ -170,7 +170,7 @@
                 display: flex;
                 justify-content: space-between;   
                 align-items: center;
-                max-width: 1800px;
+                max-width: 900px;
                 margin: 40px auto;                    
                 gap: 0 40px;
             }
