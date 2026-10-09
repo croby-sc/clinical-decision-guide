@@ -182,6 +182,11 @@
                 border-radius: 8px;                
             }
 
+            .symptoms-layout {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
             .symptoms-title {
                 font-family: Inter, Arial, sans-serif;
                 font-size: 48px;
@@ -189,8 +194,7 @@
                 color: #0E519D;
                 line-height: 1.2;
                 letter-spacing: 0;
-                text-align: center;
-                flex: 1;   /* THIS centers the text between the images */
+                text-align: center;                
             }
 
             .symptoms-subtitle {
