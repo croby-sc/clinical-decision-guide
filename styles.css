@@ -168,17 +168,18 @@
 /*Page 2 symptoms.html*/
             .symptoms-images {
                 display: flex;
-                justify-content: space-between;   /* spreads them evenly */
+                justify-content: space-between;   
                 align-items: center;
                 max-width: 1800px;
-                margin: 40px auto;                    /* space above/below the images */
+                margin: 40px auto;                    
+                gap: 0 40px;
             }
 
             .symptoms-images img {
                 width: 288px;
                 height: 192px;
-                object-fit: cover;                 /* keeps them clean and not stretched */
-                border-radius: 8px;                /* optional: makes them look nicer */
+                object-fit: cover;                 
+                border-radius: 8px;                
             }
 
             .symptoms-title {
@@ -195,22 +196,22 @@
             .symptoms-subtitle {
                 text-align: center;
                 font-family: Inter, Arial, sans-serif;
-                font-size: 22px;        /* slightly smaller than 24px */
+                font-size: 22px;        
                 font-weight: 400;
-                color: #555555;
+                color: black;
                 line-height: 1.4;
                 letter-spacing: 0;
                 margin-top: 20px;
-                margin-bottom: 30px;    /* space before the buttons */
+                margin-bottom: 30px;    
             }
 
             .symptoms-btn {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);   /* 3 buttons per row */
-                column-gap: 200px;                                /* spacing between buttons */
-                row-gap: 100px;                                  /*spacing between rows */
-                max-width: 1800px;                         /* keeps equal left/right margins */
-                margin: 80px auto 100px;                      /* space above center and below the grid */
+                grid-template-columns: repeat(3, 1fr);   
+                column-gap: 200px;                               
+                row-gap: 100px;                                  
+                max-width: 1800px;                         
+                margin: 80px auto 100px;                     
             }            
 
             .symptom-btn {
@@ -218,15 +219,15 @@
                 justify-content: center;
                 align-items: center;
 
-                background-color: #C8C8C8;
-                color: #000000;
+                background-color: #9d0e21;
+                color: white;
                 font-family: Inter, Arial, sans-serif;
                 font-size: 22px;
                 font-weight: 700;
 
                 padding: 20px 10px;
                 border-radius: 20px;
-                border: 2px solid #B5B5B5;
+                border: 2px solid black;
 
                 text-decoration: none;   /* removes underline */
                 box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
@@ -237,8 +238,8 @@
             }
 
             .symptom-btn:hover {
-                background-color: #BEBEBE;
-                border-color: #A8A8A8;
+                background-color: #c4242c;
+                border-color: black;
                 transform: translateY(-3px);
             }
 
