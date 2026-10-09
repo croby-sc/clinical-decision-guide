@@ -11,13 +11,18 @@
                 width: auto;
                 margin-right: 40px;
             }
+
+            .logo {
+                position: absolute;
+                left: 20px;
+            }
+
             header {
-                background-color: #1e88e5;
+                background-color: #1565c0;
                 height: 90px;
-                display: flex;
-                align-items: center;
-                padding-left: 20px;
                 position: relative;
+                display: flex;
+                align-items: center;               
             }
 
             header h1 {
@@ -25,11 +30,9 @@
                 font-size: 34px;
                 font-weight: bold;                
                 color: white;
-                position: absolute;
-                left: 0;
-                right: 0;
-                text-align: center;
                 margin: 0;
+                width: 100%;
+                text-align: center;
             }
 
             nav {
@@ -41,7 +44,7 @@
             }
 
             nav ul {
-                list-style: none;          /* removes bullets */
+                list-style: none;          
                 display: flex;             /* makes items horizontal */
                 gap: 40px;                 /* spacing between links */
                 margin: 0;
@@ -52,12 +55,14 @@
                 font-family: Inter, Arial, sans-serif;
                 font-size: 28px;
                 font-weight: 600;
-                color: black;              /* black text like your example */
+                color: black;              
                 text-decoration: none;     /* removes underline */
+                transition: color 0.2s ease-in-out;
+                cursor: pointer;
             }
 
             nav ul li a:hover {
-                color: #ffffff;            /* optional: turns white on hover */
+                color: #ffffff;            /* turns white on hover */
             }
 
             .hero-text h2 {
@@ -76,10 +81,10 @@
                 font-family: Inter, Arial, sans-serif;
                 font-size: 24px;
                 font-weight: 400; 
-                color: #555555;
+                color: #0a0a0a;
                 line-height: 1.4; 
                 letter-spacing: 0;
-                max-width: 688px;
+                max-width: 520px;
             }            
 
             .home-heading {
@@ -91,24 +96,27 @@
 
             .home-layout {
                 display: flex;
-                justify-content: flex-start;
-                align-items: flex-start;               
-                gap: 50px;
+                justify-content: center;
+                align-items: center;               
+                gap: 60px;
+                flex-wrap: nowrap;
+                max-width: 1200px;
+                margin: 0 auto;
             }
 
             .hero-image {
-                align-self: flex-start;
-                margin-top: 80px;                
+                padding-top: 40px;                
             }
 
             .hero-img {
-                width: 450px;
-                height: auto;                
+                width: 600px;
+                height: auto;
+                flex-shrink: 0;                                
             }
 
 
             .start-button {
-                background-color: #0E519D;
+                background-color: #9d0e21;
                 color: white;
                 font-family: inter, Arial, sans-serif;
                 font-size: 20px;
@@ -122,17 +130,22 @@
                 display: block;
 
                 box-shadow: inset 0 4px 6px rgba(0,0,0,0.3), 
-                            4px 4px 8px rgba(0,0,0,0.25); 
+                            4px 4px 8px rgba(0,0,0,0.25);     
             }
 
             .start-button:hover {
-                background-color: #0b3a73;
+                background-color: #c4142c;
                 transform: translate(-3px);
-                box-shadow: 0 6px 12px rfba(0,0,0,0.25);
-            }            
+                box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+            }
+            
+            .start-button:focus {
+                outline: 3px solid #ffffff;
+                outline-offset: 3px;
+            }
 
             footer {
-                background-color: #1e88e5;
+                background-color: #1565c0;
                 height: 90px;
                 display: flex;
                 align-items: center;
@@ -143,10 +156,15 @@
                 font-family: Inter, Arial, sans-serif;
                 font-size: 16px;
                 font-weight: 400;
-                color: #DDDDDD;
+                color: #FFFFFF;
                 line-height: 1.4;
                 max-width: 660px; 
             }
+
+            main {
+                padding: 20px 40px;            
+            }
+
 /*Page 2 symptoms.html*/
             .symptoms-images {
                 display: flex;
@@ -401,7 +419,7 @@
 
         /* Submit Button (matches your Page 1 button) */
         .feedback-submit {
-            background-color: #0E519D;
+            background-color: #9d0e21;
             color: #fff;
             font-size: 22px;
             font-family: Inter, Arial, sans-serif;
@@ -415,7 +433,7 @@
         }
 
         .feedback-submit:hover {
-            background-color: #0b3a73;   
+            background-color: #c4142c;   
             transform: translateY(-3px); 
             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
         }
