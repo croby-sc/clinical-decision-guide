@@ -2,10 +2,17 @@
 /* Author: Catherine Roby */
 /* Course: Intro to Web Systems ITEC 362 */
 /* Assignment: Static Website for GitHub Pages */
-/* Last update: Sept 26, 2026 */ 
+/* Last update: October 26, 2026 */
+
+        *{box-sizing: border-box;}
 
            
-/*Page 1 home.html*/       
+/*Page 1 home.html*/ 
+            img { 
+                max-width: 100%; 
+                height: auto; 
+            }
+
            .logo img {
                 height: 70px;
                 width: auto;
@@ -442,3 +449,168 @@
             transform: translateY(-3px); 
             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
         }
+
+        /* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+
+    .logo {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        height: 50px;
+        margin-right: 0;
+    }
+
+    header h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    body {
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    html, body { 
+        width: 100%; 
+        overflow-x: hidden; 
+    }
+
+    nav {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .home-layout {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .home-heading {
+        font-size: 32px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .start-button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 18px;
+    }
+
+    footer {
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .symptoms-title { 
+        font-size: 32px; 
+    }
+
+    .symptoms-subtitle { 
+        font-size: 18px; 
+        padding: 0 10px; 
+    }
+
+    .symptom-btn { 
+        font-size: 18px;
+        width: 100%; 
+    }
+
+    .symptoms-images { 
+        flex-direction: column; 
+        gap: 20px; 
+    }
+
+    .symptoms-images img { 
+        width: 100%; 
+        max-width: 300px; 
+        height: auto; 
+    }
+
+    .symptoms-btn { 
+        grid-template-columns: 1fr; 
+        row-gap: 20px; 
+        column-gap: 0; 
+    }
+
+    .test-layout { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .test-image img { 
+        width: 100%; 
+        max-width: 400px; 
+    }
+
+    .test-heading { 
+        font-size: 32px; 
+    }
+
+    .test-panel { 
+        max-width: 100%; 
+        padding: 10px; 
+    }
+
+    .feedback-form { 
+        flex-direction: column; 
+    }
+
+    .feedback-right { 
+        width: 100%; 
+    }
+
+    .feedback-input, .feedback-dropdown, .feedback-textarea { 
+        width: 100%; 
+    }
+    .feedback-submit { 
+        width: 100%; 
+        max-width: 250px; 
+    }
+}
