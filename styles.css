@@ -2,7 +2,7 @@
 /* Author: Catherine Roby */
 /* Course: Intro to Web Systems ITEC 362 */
 /* Assignment: Static Website for GitHub Pages */
-/* Last update: October 27, 2026 */
+/* Last update: November 1, 2026 */
 
         *{box-sizing: border-box;}
 
@@ -620,5 +620,26 @@
     .feedback-submit { 
         width: 100%; 
         max-width: 250px; 
+    }
+    .details-heading {
+        font-size: 32px;
+    }
+
+    .details-subtitle {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    #test-name {
+        font-size: 24px;
+    }
+
+    .detail-section {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .details-layout {
+        max-width: 100%;
     }
 }
